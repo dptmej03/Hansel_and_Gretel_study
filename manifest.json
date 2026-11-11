@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "헨젤과 그레텔 공부법",
+  "version": "0.5.0",
+  "description": "스크롤하며 읽을 때마다 쿠키를 떨어뜨리고, 모은 쿠키로 이야기를 진행합니다.",
+  "permissions": ["storage"],
+  "icons": { "16": "icons/icon16.png", "32": "icons/icon32.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "action": { "default_popup": "popup.html", "default_icon": { "16": "icons/icon16.png", "32": "icons/icon32.png" } },
+  "content_scripts": [
+    { "matches": ["http://*/*", "https://*/*"], "all_frames": true, "js": ["cookie.js", "content.js"] }
+  ]
+}

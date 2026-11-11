@@ -1,0 +1,28 @@
+<!doctype html>
+<meta charset="utf-8">
+<style>
+  body { width: 280px; margin: 0; padding: 12px; background: #fff4dc; color: #3b2314;
+         font: bold 13px/1.4 "Courier New", monospace; }
+  h3 { margin: 0 0 8px; font-size: 15px; }
+  img { image-rendering: pixelated; }
+  .box { border: 4px solid #3b2314; background: #ffe9b8; padding: 6px 8px; margin-bottom: 10px; }
+  button { font: inherit; color: #3b2314; background: #f2b84b; border: 3px solid #3b2314; border-radius: 0;
+           padding: 4px 8px; cursor: pointer; box-shadow: 0 3px 0 #3b2314; }
+  button:active { transform: translateY(3px); box-shadow: none; }
+  button:disabled { background: #cdbf9d; color: #8a7a5a; cursor: not-allowed; box-shadow: 0 3px 0 #8a7a5a; border-color: #8a7a5a; }
+  #toggle { width: 100%; margin-bottom: 10px; padding: 6px; }
+  .item { display: flex; align-items: center; gap: 8px; margin: 6px 0; }
+  .item img { width: 32px; height: 32px; object-fit: contain; }
+  .item .info { flex: 1; }
+  .item small { display: block; font-weight: normal; }
+</style>
+<h3><img id="logo" width="24" height="24" style="vertical-align:middle"> 헨젤과 그레텔 공부법</h3>
+<div class="box">
+  <div>지갑 <span id="wallet">0</span>개 · 누적 <span id="total">0</span>점</div>
+  <div>오늘 <span id="today">0</span>점 · 연속 <span id="streak">0</span>일</div>
+</div>
+<button id="toggle"></button>
+<h3>🛒 상점</h3>
+<div class="box" id="shop"></div>
+<script src="cookie.js"></script>
+<script src="popup.js"></script>
